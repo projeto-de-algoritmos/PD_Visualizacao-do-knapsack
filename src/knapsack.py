@@ -1,5 +1,3 @@
-
-
 class Knapsack:
 
     def __init__(self):
@@ -24,8 +22,10 @@ class Knapsack:
             self.pesos.append(peso_item)
 
     def knapsack(self):
-        table = [[0 for _ in range(self.peso_max + 1)]
-                 for _ in range(self.quantiaItens + 1)]
+        table = [
+            [0 for _ in range(self.peso_max + 1)]
+            for _ in range(self.quantiaItens + 1)
+        ]
 
         for i in range(self.quantiaItens + 1):
             for peso_atual in range(self.peso_max + 1):
@@ -38,10 +38,3 @@ class Knapsack:
                     table[i][peso_atual] = table[i - 1][peso_atual]
 
         return table[self.quantiaItens][self.peso_max]
-
-
-if (__name__ == "__main__"):
-
-    knap = Knapsack()
-    knap.set()
-    print(knap.knapsack())
