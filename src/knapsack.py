@@ -44,5 +44,15 @@ class Knapsack:
                 peso_atual -= self.pesos[i - 1]
             i -= 1
 
-        return table[self.quantiaItens][self.peso_max], itens_escolhidos
+        for i in range(self.quantiaItens + 1):
+            for peso_atual in range(self.peso_max + 1):
+                if i == 0 or peso_atual == 0:
+                    table[i][peso_atual] = 0
+                elif self.pesos[i - 1] <= peso_atual:
+                    table[i][peso_atual] = max(
+                        self.valores[i - 1] + table[i - 1][peso_atual - self.pesos[i - 1]], table[i - 1][peso_atual])
+                else:
+                    table[i][peso_atual] = table[i - 1][peso_atual]
+
+        return table
 
