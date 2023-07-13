@@ -36,15 +36,11 @@ class Knapsack:
                 elif self.pesos[i - 1] <= peso_atual:
                     self.table[i][peso_atual] = max(
                         self.valores[i - 1] + self.table[i - 1][peso_atual - self.pesos[i - 1]], self.table[i - 1][peso_atual])
-                    # print(itens_escolhidos)
                 else:
                     self.table[i][peso_atual] = self.table[i - 1][peso_atual]
-            # self.rastreiaItens
             list_itens_escolhidos.append(self.filter(itens_escolhidos))
             itens_escolhidos=[]
-                    # print(itens_escolhidos)
 
-        # Rastreia os itens selecionados
 
         return self.table[self.quantiaItens][self.peso_max], list_itens_escolhidos
 
