@@ -13,6 +13,12 @@ Este projeto busca trazer um demonstração mais visual do algoritmo Knapsack. E
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
+![image](https://github.com/projeto-de-algoritmos/PD_Visualizacao-do-knapsack/assets/54087048/c12b351d-5876-4620-bb75-c1a4e914b06d)
+![image](https://github.com/projeto-de-algoritmos/PD_Visualizacao-do-knapsack/assets/54087048/649c5be2-a521-4c97-b5a4-0e0733ddcca4)
+![image](https://github.com/projeto-de-algoritmos/PD_Visualizacao-do-knapsack/assets/54087048/d173a10b-ad61-404b-9e05-c29a9b44e846)
+
+
+
 ## Instalação 
 **Linguagem**: Python
 
