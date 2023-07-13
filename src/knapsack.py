@@ -12,9 +12,8 @@ class Knapsack:
             input("Digite o número de itens a serem processados: "))
 
         for i in range(self.quantiaItens):
-            print(i + 1)
-            valor_item = int(input("Digite o valor do item: "))
-            peso_item = int(input("Digite o peso do item: "))
+            valor_item = int(input(f"Digite o valor do item {i + 1}: "))
+            peso_item = int(input(f"Digite o peso do item {i + 1}: "))
             self.valores.append(valor_item)
             self.pesos.append(peso_item)
 
