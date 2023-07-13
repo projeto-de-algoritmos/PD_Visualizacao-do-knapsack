@@ -6,6 +6,11 @@
 | 190105071 | Davi Gonçalves Akegawa Pierre   |
 | 180042238 | João Gabrial de Campos de Matos |
 
+
+As cores de cada um dos itens aparece conforme a tabela abaixo, sendo que sempre se inicia no 1.
+![image](https://github.com/projeto-de-algoritmos/PD_Visualizacao-do-knapsack/assets/54087048/9af53e0d-8eed-4981-b536-0bbd06d4ee6d)
+
+
 ## Sobre 
 
 Este projeto busca trazer um demonstração mais visual do algoritmo Knapsack. Estamos fazendo uso da biblioteca pyxel para demonstrar cada um dos casos pelos quais o algoritmo itera até encontrar a resposta ideal.
