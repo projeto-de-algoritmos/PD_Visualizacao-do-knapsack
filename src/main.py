@@ -9,5 +9,5 @@ if (__name__ == "__main__"):
     table = knapsack.get_table()
 
     # Imprimir a tabela
-    for row in table:
+    for row in itens_escolhidos:
         print(row)

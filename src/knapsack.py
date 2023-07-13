@@ -29,13 +29,26 @@ class Knapsack:
             for peso_atual in range(self.peso_max + 1):
                 if i == 0 or peso_atual == 0:
                     self.table[i][peso_atual] = 0
+                    
+
                 elif self.pesos[i - 1] <= peso_atual:
+
                     self.table[i][peso_atual] = max(
                         self.valores[i - 1] + self.table[i - 1][peso_atual - self.pesos[i - 1]], self.table[i - 1][peso_atual])
+                    self.rastreiaItens(itens_escolhidos)
+                    # print(itens_escolhidos)
+                    
                 else:
                     self.table[i][peso_atual] = self.table[i - 1][peso_atual]
+                    self.rastreiaItens(itens_escolhidos)
+                    # print(itens_escolhidos)
 
         # Rastreia os itens selecionados
+        
+
+        return self.table[self.quantiaItens][self.peso_max], itens_escolhidos
+
+    def rastreiaItens(self, itens_escolhidos):
         i = self.quantiaItens
         peso_atual = self.peso_max
         while i > 0 and peso_atual > 0:
@@ -44,7 +57,6 @@ class Knapsack:
                 peso_atual -= self.pesos[i - 1]
             i -= 1
 
-        return self.table[self.quantiaItens][self.peso_max], itens_escolhidos
 
     def get_table(self):
         return self.table

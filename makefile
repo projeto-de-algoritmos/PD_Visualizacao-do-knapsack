@@ -25,7 +25,8 @@ runfile: venv
 	$(PYTHON) src/$(f).py
 
 run: venv 
-	-$(PYTHON) src/main.py
+	-clear
+	-$(PYTHON) src/main.py < teste.txt
 
 
 
