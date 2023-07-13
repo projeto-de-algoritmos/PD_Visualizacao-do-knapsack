@@ -8,7 +8,8 @@ class Knapsack:
 
     def set(self):
         self.peso_max = int(input("Digite o peso máximo da sua mochila: "))
-        self.quantiaItens = int(input("Digite o número de itens a serem processados: "))
+        self.quantiaItens = int(
+            input("Digite o número de itens a serem processados: "))
 
         for i in range(self.quantiaItens):
             print(i + 1)
@@ -23,10 +24,12 @@ class Knapsack:
             for _ in range(self.quantiaItens + 1)
         ]
 
-        itens_escolhidos = []
+        list_itens_escolhidos = []
 
         for i in range(self.quantiaItens + 1):
+            itens_escolhidos = []
             for peso_atual in range(self.peso_max + 1):
+                self.rastreia(itens_escolhidos)
                 if i == 0 or peso_atual == 0:
                     self.table[i][peso_atual] = 0
                     
@@ -56,7 +59,6 @@ class Knapsack:
                 itens_escolhidos.append(i)
                 peso_atual -= self.pesos[i - 1]
             i -= 1
-
 
     def get_table(self):
         return self.table
