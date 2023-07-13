@@ -16,16 +16,14 @@ class App:
         
         for j in range(self.i):
             y = 3
-            x = 30
+            x = 20
             for index in self.itens[j]:
-                pyxel.rect(x, y+(7*j), 4, 4,index)
-                x = x + 7
-            x = 30
-        # pass
+                pyxel.rect(x, y+(8*j), 4, 4,index+1)
+                x = x + 8
+            x = 20
 
     def update(self):
-        # pass
-        if (self.i < len(self.itens)-1):
+        if (self.i < len(self.itens)):
             self.i = self.i+1
 
 
