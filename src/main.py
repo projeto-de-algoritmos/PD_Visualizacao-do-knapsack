@@ -11,3 +11,5 @@ if (__name__ == "__main__"):
     # Imprimir a tabela
     for row in itens_escolhidos:
         print(row)
+    # print(itens_escolhidos)
+
